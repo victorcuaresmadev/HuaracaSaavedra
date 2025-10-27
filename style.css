@@ -16,11 +16,11 @@ body {
 
 .container {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   padding: 35px 25px;
   text-align: center;
-  max-width: 420px;
+  max-width: 480px;
   width: 100%;
   animation: fadeIn 1s ease;
 }
@@ -42,37 +42,50 @@ h2 span {
   font-weight: 600;
 }
 
-/* Marco del video en formato vertical (9:16) */
+/* Contenedor centrado */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Marco vertical con mayor tamaño */
 .video-frame {
   position: relative;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 25px auto;
-  background: #000;
-  border-radius: 15px;
+  width: 90%;
+  max-width: 350px; /* más ancho en móviles */
+  aspect-ratio: 9 / 16;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.25);
-  aspect-ratio: 9 / 16; /* ✅ asegura proporción vertical correcta */
+  background: #000;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .video-frame iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 115%; /* zoom para llenar más el marco */
+  height: 115%;
+  transform: translate(-50%, -50%);
   border: none;
-  object-fit: cover;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .footer-text {
   color: #777;
   font-size: 0.9rem;
   font-style: italic;
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
