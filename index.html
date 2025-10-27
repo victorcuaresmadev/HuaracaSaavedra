@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antes de saber el sexo - Zilery y Lio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
@@ -12,18 +12,23 @@
     <h2>Antes de saber el sexo del bebé de <span>Zilery y Lio</span></h2>
 
     <div class="video-wrapper">
-      <div class="video-frame">
-        <iframe
-          src="https://drive.google.com/file/d/1rjCkbEBut59VEAyiJ9a1uyNhg9FQTnID/preview"
-          allow="autoplay; fullscreen"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <iframe
+        id="babyVideo"
+        src="https://drive.google.com/file/d/1rjCkbEBut59VEAyiJ9a1uyNhg9FQTnID/preview"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen>
+      </iframe>
     </div>
+
+    <button id="fullscreenBtn" class="fullscreen-btn" onclick="toggleFullScreen()">🖥️ Ver en pantalla completa</button>
 
     <p class="footer-text">
       💙💗 Un hermoso recuerdo de la ilusión antes de conocer la verdad 💗💙
     </p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
