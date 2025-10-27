@@ -18,9 +18,9 @@ body {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(0,0,0,0.2);
-  padding: 40px 30px;
+  padding: 35px 25px;
   text-align: center;
-  max-width: 450px;
+  max-width: 420px;
   width: 100%;
   animation: fadeIn 1s ease;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 h2 span {
@@ -42,23 +42,27 @@ h2 span {
   font-weight: 600;
 }
 
-.video-container {
+/* Marco del video en formato vertical (9:16) */
+.video-frame {
   position: relative;
   width: 100%;
-  padding-top: 177%; /* Relación 9:16 para formato vertical */
-  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto 25px auto;
+  background: #000;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  aspect-ratio: 9 / 16; /* ✅ asegura proporción vertical correcta */
 }
 
-.video-container iframe {
+.video-frame iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  object-fit: cover;
   border-radius: 15px;
 }
 
