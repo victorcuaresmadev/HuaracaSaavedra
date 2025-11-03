@@ -2,33 +2,190 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antes de saber el sexo - Zilery y Lio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Los Videos del Bebé - Zilery y Lio</title>
+  <style>
+    /* 🌈 Fondo y estilo general */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(160deg, #ffb6c1 0%, #add8e6 100%);
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 1rem;
+      -webkit-tap-highlight-color: transparent; /* Evita parpadeo azul al tocar */
+    }
+
+    .container {
+      max-width: 100%;
+      margin: auto;
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: #444;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    span {
+      color: #ff69b4;
+      font-weight: 600;
+    }
+
+    /* 🎬 Video */
+    .video-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .video-title {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Relación 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    /* 🖥️ Botón */
+    .fullscreen-btn {
+      margin-top: 1rem;
+      padding: 0.9rem 1.5rem;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      width: 90%;
+      max-width: 300px;
+      color: #333;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .fullscreen-btn:active {
+      transform: scale(0.98);
+      background-color: #ffa4b4;
+    }
+
+    /* 💬 Pie */
+    .footer-text {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* 💖 Animación */
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.8; }
+      50% { transform: translateY(-8px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.8; }
+    }
+
+    .emoji {
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* 📱 Ajustes específicos para pantallas pequeñas */
+    @media (max-width: 480px) {
+      h1 { font-size: 1.4rem; }
+      h2 { font-size: 0.95rem; }
+      .video-title { font-size: 1rem; }
+      .fullscreen-btn { font-size: 0.9rem; padding: 0.8rem; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>¿Qué queríamos que fuera?</h1>
-    <h2>Antes de saber el sexo del bebé de <span>Zilery y Lio</span></h2>
+    <h1>Los Videos del Bebé 💖💙</h1>
+    <h2>Antes y después de saber el sexo del bebé de <span>Zilery y Lio</span></h2>
 
-    <div class="video-wrapper">
-      <iframe
-        id="babyVideo"
-        src="https://drive.google.com/file/d/1rjCkbEBut59VEAyiJ9a1uyNhg9FQTnID/preview"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        webkitallowfullscreen
-        mozallowfullscreen>
-      </iframe>
+    <!-- 🎥 Video 1 -->
+    <div class="video-section">
+      <h3 class="video-title">💭 ¿Qué queríamos que fuera?</h3>
+      <div class="video-wrapper">
+        <iframe
+          id="video1"
+          src="https://drive.google.com/file/d/1rjCkbEBut59VEAyiJ9a1uyNhg9FQTnID/preview"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="¿Qué queríamos que fuera - Antes de saber el sexo del bebé">
+        </iframe>
+      </div>
+      <button class="fullscreen-btn" onclick="verPantallaCompleta('video1')">
+        🖥️ Ver en pantalla completa
+      </button>
     </div>
 
-    <button id="fullscreenBtn" class="fullscreen-btn" onclick="toggleFullScreen()">🖥️ Ver en pantalla completa</button>
+    <!-- 🎥 Video 2 -->
+    <div class="video-section">
+      <h3 class="video-title">💖💙 ¡Descubrimos el género del bebé!</h3>
+      <div class="video-wrapper">
+        <iframe
+          id="video2"
+          src="https://drive.google.com/file/d/1-F9kQLnZVVSqz9PtSOaTcwLJwJ1tULIn/preview"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="¡Descubrimos el género del bebé de Zilery y Lio!">
+        </iframe>
+      </div>
+      <button class="fullscreen-btn" onclick="verPantallaCompleta('video2')">
+        🖥️ Ver en pantalla completa
+      </button>
+    </div>
 
     <p class="footer-text">
-      💙💗 Un hermoso recuerdo de la ilusión antes de conocer la verdad 💗💙
+      <span class="emoji">💙</span> Un hermoso recuerdo lleno de amor y emoción <span class="emoji">💗</span>
     </p>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // 📱 Función pantalla completa compatible con Android
+    function verPantallaCompleta(id) {
+      const iframe = document.getElementById(id);
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) { // Safari
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+      } else if (iframe.msRequestFullscreen) { // Edge
+        iframe.msRequestFullscreen();
+      }
+    }
+  </script>
 </body>
 </html>
